@@ -1,17 +1,39 @@
+:root{
+    --colorGlogal:"rgba(161, 3, 187, 1)";
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-html{
-    background-color: black;
+html {
+    background-color: rgb(255, 255, 255);
     scroll-behavior: smooth;
 }
 
+/* ************ GENERAL ************ */
+.titulos h2 {
+    padding: 4rem 0 1rem;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(96, 152, 204);
+}
+.titulos h2::before{
+    content: "<";
+}
+
+.titulos h2::after{
+    content: " />";
+}
+
+
 /***CABECERA***/
 .main{
-    background-image: url("https://images.unsplash.com/photo-1611310102866-e7d3918cf473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-image: url("../imagenes/portada2.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,14 +44,15 @@ html{
 
 /****MENÚ****/
 .main-nav{
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(197, 124, 254, 0.1);
-    position: fixed;
     width: 100%;
     height: 50px;
-    top: 0;
+    background-color: rgb(96, 152, 204);
+    z-index: 10;
 }
 
 .main-nav__list{
@@ -43,39 +66,39 @@ html{
 }
 
 .main-nav__link{
-    text-decoration: none;
-    color: white;
+    padding: 5px 2px;
     font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 .main-nav__link:hover{
-    border: 2px solid rgba(161, 3, 187, 1);
-    padding: 5px 9px;
-    border-radius: 20px;
+    text-decoration: underline;
 
 }
 
 /*****CARD PRESENTACIÓN******/
 .card-name{
-    width: 35%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 35%;
+    height: 100vh;
 }
 
 .card-section{
-    background-color: rgba(197, 124, 254, 0.1);
     margin-left: 20px;
     padding: 15px 25px;
     font-size: 20px;
     font-weight: bold;
+    background-color: rgba(96, 152, 204, 0.288);
+    border-radius: 15px;
 }
 
 .card-name__name{
-    font-size: 60px;
-    text-shadow: 0 0 15px white;
     padding: 10px 0;
+    font-size: 60px;
+    text-shadow: 0 0 15px rgb(96, 152, 204);
 }
 
 .enlaces{
@@ -87,50 +110,37 @@ html{
 }
 
 .enlaces__link{
-    border: 2px solid rgba(161, 3, 187, 1);
     padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(96, 152, 204);
+    border: 2px solid rgb(96, 152, 204);
     border-radius: 20px;
 }
 
 .enlaces__link:hover{
     padding: 5px 15px;
-    background-color: rgb(82, 1, 82);
+    background-color: transparent;
 }
 
 
 /* ************Precentacion************* */
 
 .presentacion{
-    /* display: flex;
-    justify-content: space-evenly;
-    margin: 20px 40px; */
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
 
 .presentacion-info{
-    color: white;
-    text-align: justify;
     padding: 20px;
+    text-align: justify;
 }
 
-.presentacion-info h2{
-    font-size: 3rem;
-    text-align: center;
-    margin: 50px 0;
-}
-
-.presentacion-info h2::before{
-    content: "<";
-}
-
-.presentacion-info h2::after{
-    content: " />";
-}
 
 .presentacion-info p{
-    font-size: 1.7rem;
     padding:0 55px 20px;
+    font-size: 1.7rem;
 }
 
 .presentacion img{
@@ -138,4 +148,134 @@ html{
     margin-left: auto;
     margin-right: auto;
     padding-top: 4rem;
+    filter: drop-shadow(0 0 10px rgb(96, 152, 204));
+}
+
+
+/* DOCUMENTACION DE ICONOS */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+
+  /* *************************** HABILIDADES *************************** */
+  
+
+.habilidades-iconsP {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.habilidades-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4rem;
+    border: .25rem solid rgb(96, 152, 204);
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.habilidades-icons img {
+    width: 75px;
+    padding: 10px 0;
+    padding-left: 5px;
+}
+
+.habilidades-icons div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+    /* *************************** PORTAFOLIO *************************** */
+
+
+.portafolio-evidencia {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 2rem;
+}
+
+.portafolio-trabajos {
+    position: relative;
+    height: 35vh;
+    margin: 0 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 5px -5px 10px 1px rgb(96, 152, 204);
+    overflow: hidden;
+}
+
+.portafolio-trabajos img {
+    max-width: 100%;
+}
+
+.portafolio-trabajos__info {
+    position: absolute;
+    top: 11.4rem;
+    width: 100%;
+    height: auto;
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgba(96, 152, 204, 0.267);
+    transition: 1s;
+}
+.portafolio-trabajos:hover .portafolio-trabajos__info{
+    top:80px;
+}
+
+.portafolio-trabajos__info h4 {
+    margin-bottom: 2px;
+    padding: .30rem;
+    font-weight: bold;
+}
+
+
+.portafolio-info__tecnologias {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 5px;
+}
+
+.portafolio-info__tecnologias img{
+    width: 2rem;
+}
+
+.portafolio-info__tecnologias a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 2px .5rem 0;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(96, 152, 204);
+    border: 2px solid rgb(96, 152, 204);
+    border-radius: 20px;
+}
+
+.portafolio-info__tecnologias a:hover {
+    border: 2px solid rgb(96, 152, 204);
+    background-color: transparent;
 }
