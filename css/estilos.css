@@ -308,7 +308,7 @@ html {
 
 .habilidades {
     width: 100%;
-    height: 100vh;
+    height: auto;
     /* margin: 10vh 0; */ 
 }
 
@@ -348,18 +348,6 @@ html {
     font-weight: bold ;
 } 
 
-
-
-
-
-
-
-
-
-
-
-
-
     /* *************************** PORTAFOLIO *************************** */
 
 #portafolio1 {
@@ -367,16 +355,29 @@ html {
     background-size: cover;
     background-position: center;
 }
+#portafolio2 {
+    background-image: url(../imagenes/pokemon.jfif);
+    background-size: cover;
+    background-position: center;
+}
+
+.portafolio {
+    width: 100%;
+}
 .portafolio-evidencia {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    margin-top: 2rem;
+    width: 90%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
 }
 
 .portafolio-trabajos {
     position: relative;
-    height: 35vh;
-    margin: 0 2rem 3rem;
+    max-width: 450px;
+    min-height: 30vh;
+    max-height: 40vh;
+    margin: 0 auto 3rem;
     border-radius: 10px;
     box-shadow: 5px -5px 10px 1px rgb(96, 152, 204);
     overflow: hidden;
@@ -390,23 +391,23 @@ html {
 
 .portafolio-trabajos__info {
     position: absolute;
-    top: 11.4rem;
+    bottom: -6rem;
     width: 100%;
     height: auto;
-    font-size: 1.3rem;
     color: white;
+    padding-left: .5rem;
     background-color: rgba(96, 152, 204, 0.267);
-    transition: 1s;
+    transition: transform 1s, color 1s;
 }
 
-.portafolio-trabajos:hover .portafolio-trabajos__img,
-.portafolio-trabajos:hover #portafolio1{
-    filter: grayscale(1);
+.portafolio-trabajos__info h4{
+    font-size: var(--step-1);
 }
 
 .portafolio-trabajos:hover .portafolio-trabajos__info {
-    top:80px;
+    transform: translateY(-6.5rem);
     background-color: rgba(96, 152, 204, 0.801);
+    color: black;
 }
 
 .portafolio-trabajos__info h4 {
@@ -441,10 +442,11 @@ html {
 .portafolio-info__tecnologias a:hover {
     border: 2px solid rgb(96, 152, 204);
     background-color: transparent;
+    transform: scale(110%);
 }
 
 
-
+/* ***************************** MEDIA QUERY ******************* */
 
 @media (min-width:30em) {
     .card-section {
@@ -478,7 +480,29 @@ html {
     }
 
  }
- 
+
+ @media (min-width:48em) {
+     .portafolio {
+         width: 100%;
+     }
+    .portafolio-evidencia {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(20rem,27rem));
+        column-gap: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portafolio-trabajos {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
  @media (min-width:64em) {
     .presentacion {
         width: 100%;
@@ -505,6 +529,24 @@ html {
     
     .habilidades-icons {
         width: 90%;
+    }
+
+
+    .portafolio-evidencia {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(15rem,1fr));
+        grid-template-rows: 35vh;
+        grid-auto-rows: 35vh;
+        column-gap: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .portafolio-trabajos {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
  }
 
