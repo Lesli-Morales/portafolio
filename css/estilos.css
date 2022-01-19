@@ -222,6 +222,26 @@ html {
 .card-name__name {
     margin-top: 1rem;
     font-size: 3rem;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 11ch;
+    animation: escribe 2s steps(11),
+        puntero .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes escribe {
+    0%{
+        width: 0;
+    }
+
+}
+
+@keyframes puntero {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .enlaces {
@@ -444,6 +464,38 @@ html {
     background-color: transparent;
     transform: scale(110%);
 }
+
+/* ***************************** CONTACTO ******************* */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+
+
+
 
 
 /* ***************************** MEDIA QUERY ******************* */
