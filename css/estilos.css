@@ -219,30 +219,23 @@ html {
     color: rgb(8, 8, 124);
 }
 
+@keyframes entrada {
+    0% {
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 .card-name__name {
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-size: 3rem;
-    display: block;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 13ch;
-    animation: escribe 2s steps(13),
-        puntero .5s infinite step-end alternate;
-    overflow: hidden;
+    animation: entrada 2s ease;
 }
 
-@keyframes escribe {
-    0%{
-        width: 0;
-    }
-
-}
-
-@keyframes puntero {
-    50% {
-        border-color: transparent;
-    }
-}
+ 
 
 .enlaces {
     display: flex;
@@ -255,6 +248,7 @@ html {
     position: relative;
     width: 7rem;
     padding: .5rem;
+    margin-right: .5rem;
     color: rgb(17, 15, 15);
     text-decoration: none;
     font-weight: bold;
@@ -438,25 +432,29 @@ html {
 
 
 .portafolio-info__tecnologias {
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem 5px;
+  margin: .1rem auto;
 }
 
 .portafolio-info__tecnologias img{
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .portafolio-info__tecnologias a {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     margin-bottom: 2px;
-    padding: 2px .5rem 0;
+    margin-left: .5rem;
+    padding:.2rem 1rem;
     color: white;
+    text-align: center;
     text-decoration: none;
     background-color: rgb(96, 152, 204);
     border: 2px solid rgb(96, 152, 204);
     border-radius: 20px;
+}
+
+.prueba {
+    display: flex;
+    justify-content: center;
 }
 
 .portafolio-info__tecnologias a:hover {
@@ -465,33 +463,10 @@ html {
     transform: scale(110%);
 }
 
-/* ***************************** CONTACTO ******************* */
 
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-}
 
+
+/* ***************************** FOOTER ******************* */
 
 .contacto {
     width: 100%;
@@ -501,17 +476,26 @@ html {
 }
     
 .contacto-iconos {
-    background-color: #d005;
+    background-color: purple;
     width: 90% ;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.contacto-iconos span {
-    font-size: 2rem;
-    color: rgb(208, 114, 0);
+.contacto-iconos img {
+    font-size: .5rem;
+    color: blue;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* ***************************** MEDIA QUERY ******************* */
