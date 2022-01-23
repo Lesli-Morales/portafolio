@@ -219,9 +219,20 @@ html {
     color: rgb(8, 8, 124);
 }
 
+@keyframes entrada {
+    0% {
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 .card-name__name {
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-size: 3rem;
+    animation: entrada 2s ease;
 }
 
 .enlaces {
@@ -235,6 +246,7 @@ html {
     position: relative;
     width: 7rem;
     padding: .5rem;
+    margin-right: .5rem;
     color: rgb(17, 15, 15);
     text-decoration: none;
     font-weight: bold;
@@ -418,25 +430,29 @@ html {
 
 
 .portafolio-info__tecnologias {
-    display: flex;
-    justify-content: space-between;
-    margin: .5rem 5px;
+  margin: .1rem auto;
 }
 
 .portafolio-info__tecnologias img{
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .portafolio-info__tecnologias a {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     margin-bottom: 2px;
-    padding: 2px .5rem 0;
+    margin-left: .5rem;
+    padding:.2rem 1rem;
     color: white;
+    text-align: center;
     text-decoration: none;
     background-color: rgb(96, 152, 204);
     border: 2px solid rgb(96, 152, 204);
     border-radius: 20px;
+}
+
+.prueba {
+    display: flex;
+    justify-content: center;
 }
 
 .portafolio-info__tecnologias a:hover {
@@ -444,6 +460,17 @@ html {
     background-color: transparent;
     transform: scale(110%);
 }
+
+
+/* ***************************** FOOTER ******************* */
+
+
+
+
+
+
+
+
 
 
 /* ***************************** MEDIA QUERY ******************* */
