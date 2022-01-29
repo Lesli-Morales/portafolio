@@ -381,6 +381,11 @@ html {
     background-size: cover;
     background-position: center;
 }
+#portafolio3 {
+    background-image: url(../imagenes/pizzeria.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 .portafolio {
     width: 100%;
@@ -421,11 +426,24 @@ html {
     transition: transform 1s, color 1s;
 }
 
-.portafolio-trabajos__info h4{
+.pizza {
+    position: absolute;
+    bottom: -4.8rem;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding-left: .5rem;
+    background-color: rgba(96, 152, 204, 0.267);
+    transition: transform 1s, color 1s;
+}
+
+.portafolio-trabajos__info h4,
+.pizza h4{
     font-size: var(--step-1);
 }
 
-.portafolio-trabajos:hover .portafolio-trabajos__info {
+.portafolio-trabajos:hover .portafolio-trabajos__info,
+.portafolio-trabajos:hover .pizza {
     transform: translateY(-7.5rem);
     background-color: rgba(96, 152, 204, 0.801);
     color: black;
